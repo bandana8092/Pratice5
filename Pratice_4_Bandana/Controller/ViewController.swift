@@ -27,6 +27,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             ViewModel.shared.getPosts { (error) in
                       if error == nil{
                           DispatchQueue.main.async {
+                            print("Bandana")
                               GlobalMethod.shared.hideActivityIndicator(view: self.view)
                               self.postsTV.reloadData()
                           }
